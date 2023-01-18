@@ -1,0 +1,40 @@
+Test Event Name
+my_ent
+
+# inside function
+Response
+{
+  "statusCode": 200,
+  "body": {
+    "data": "\"Hello from Lambda AWS!\"",
+    "user": "Rahim Hossain",
+    "event": "{'key1': 'value1', 'key2': 'value2', 'key3': 'value3'}", <----- See here 
+    "context": "LambdaContext([aws_request_id=d31ebd59-9dd9-4367-8819-6f84ae28cf51,log_group_name=/aws/lambda/my_fun,log_stream_name=2023/01/17/[$LATEST]199edf1421624b3b87b9c0b38beec54b,function_name=my_fun,memory_limit_in_mb=128,function_version=$LATEST,invoked_function_arn=arn:aws:lambda:us-east-2:544567456402:function:my_fun,client_context=None,identity=CognitoIdentity([cognito_identity_id=None,cognito_identity_pool_id=None])])"
+  }
+}
+
+Function Logs
+START RequestId: d31ebd59-9dd9-4367-8819-6f84ae28cf51 Version: $LATEST
+END RequestId: d31ebd59-9dd9-4367-8819-6f84ae28cf51
+REPORT RequestId: d31ebd59-9dd9-4367-8819-6f84ae28cf51	Duration: 1.72 ms	Billed Duration: 2 ms	Memory Size: 128 MB	Max Memory Used: 37 MB
+
+Request ID
+d31ebd59-9dd9-4367-8819-6f84ae28cf51
+
+
+
+
+
+
+
+
+
+# web browser
+https://lyreudii5qgfjhivcb4wnxw27m0vgyaa.lambda-url.us-east-2.on.aws/
+
+{
+"data": "\"Hello from Lambda AWS!\"",
+"context": "LambdaContext([aws_request_id=686628ee-7faf-4716-891b-0500d53aaa57,log_group_name=/aws/lambda/my_fun,log_stream_name=2023/01/17/[$LATEST]41ada87712894d3ea85152204ab8fe30,function_name=my_fun,memory_limit_in_mb=128,function_version=$LATEST,invoked_function_arn=arn:aws:lambda:us-east-2:544567456402:function:my_fun,client_context=None,identity=CognitoIdentity([cognito_identity_id=None,cognito_identity_pool_id=None])])",
+"event": "{'version': '2.0', 'routeKey': '$default', 'rawPath': '/', 'rawQueryString': '', 'headers': {'sec-fetch-mode': 'navigate', 'x-amzn-tls-version': 'TLSv1.2', 'sec-fetch-site': 'none', 'accept-language': 'en-US,en;q=0.9,bn;q=0.8', 'x-forwarded-proto': 'https', 'x-forwarded-port': '443', 'x-forwarded-for': '103.159.72.106', 'sec-fetch-user': '?1', 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'x-amzn-tls-cipher-suite': 'ECDHE-RSA-AES128-GCM-SHA256', 'sec-ch-ua': '\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"', 'sec-ch-ua-mobile': '?0', 'x-amzn-trace-id': 'Root=1-63c64447-1ac6926176d81276702c080d', 'sec-ch-ua-platform': '\"Linux\"', 'host': 'lyreudii5qgfjhivcb4wnxw27m0vgyaa.lambda-url.us-east-2.on.aws', 'upgrade-insecure-requests': '1', 'cache-control': 'max-age=0', 'accept-encoding': 'gzip, deflate, br', 'sec-fetch-dest': 'document', 'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'}, 'requestContext': {'accountId': 'anonymous', 'apiId': 'lyreudii5qgfjhivcb4wnxw27m0vgyaa', 'domainName': 'lyreudii5qgfjhivcb4wnxw27m0vgyaa.lambda-url.us-east-2.on.aws', 'domainPrefix': 'lyreudii5qgfjhivcb4wnxw27m0vgyaa', 'http': {'method': 'GET', 'path': '/', 'protocol': 'HTTP/1.1', 'sourceIp': '103.159.72.106', 'userAgent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'}, 'requestId': '686628ee-7faf-4716-891b-0500d53aaa57', 'routeKey': '$default', 'stage': '$default', 'time': '17/Jan/2023:06:46:31 +0000', 'timeEpoch': 1673937991448}, 'isBase64Encoded': False}",
+"user": "Rahim Hossain"
+}
